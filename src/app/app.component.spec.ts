@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MockBuilder } from 'ng-mocks';
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
 
 describe('AppComponent', () => {
   beforeEach(() =>
-    MockBuilder(AppComponent, AppModule).keep(MatCheckboxModule)
+    MockBuilder(AppComponent, AppModule).keep(MatSlideToggleModule)
   );
 
   it('should create the app', () => {
@@ -22,7 +22,7 @@ describe('AppComponent without MockBuilder', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [AppComponent],
-      imports: [MatCheckboxModule],
+      imports: [MatSlideToggleModule],
     }).compileComponents();
   });
 
